@@ -41,6 +41,8 @@ chmod +x /tmp/missing/semester
 10.Use | and > to write the “last modified” date output by semester into a file called last-modified.txt in your home directory.
 
 ls -l /tmp/missing/semester | cut -c33-44 | cat > ~/last-modified.txt
+OR
+ls -ltr | tail -n1 | cut --d=' ' -f12-13 > ~/last-modified.txt
 
 11.Write a command that reads out your laptop battery’s power level or your desktop machine’s CPU temperature from /sys. Note: if you’re a macOS user, your OS doesn’t have sysfs, so you can skip this exercise.
 
